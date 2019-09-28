@@ -10,9 +10,8 @@ def get_time_from_all_clips(url):
     times = soup.select('span', class_='ytd-thumbnail-overlay-time-status-renderer')
     all_times = []
     for time in times:
-        if any(i.isdigit() for i in time.text):
-            if ":" in time.text:
-                all_times.append(time.text)
+        if any(i.isdigit() for i in time.text) and ":" in time.text:
+            all_times.append(time.text)
 
     return all_times
 
