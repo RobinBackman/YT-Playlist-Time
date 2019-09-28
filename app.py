@@ -19,8 +19,8 @@ def get_time_from_all_clips(url):
 # Add the time together.
 def calculate_playlist_time(time_list):
     total_sec = 0
-    for t in time_list:
-        time_split = [int(i) for i in t.split(':')]
+    for time in time_list:
+        time_split = [int(i) for i in time.split(':')]
 
         if len(time_split) == 1:
             total_sec += time_split[0]
